@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
 
-function App() {
+import { FlexDirectionPage } from './pages/FlexDirectionPage';
+import { JustifyContentPage } from './pages/JustifyContentPage';
+import { AlignItemsPage } from './pages/AlignItemsPage';
+import { FlexPage } from './pages/FlexPage';
+
+import { Navigation } from './components/Navigation/Navigation';
+
+import './styles.css';
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex-container">
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<FlexDirectionPage />} />
+        <Route path="/flex-direction" element={<FlexDirectionPage />} />
+        <Route path="/justify-content" element={<JustifyContentPage />} />
+        <Route path="/align-items" element={<AlignItemsPage />} />
+        <Route path="/flex" element={<FlexPage />} />
+      </Routes>
     </div>
   );
-}
-
-export default App;
+};

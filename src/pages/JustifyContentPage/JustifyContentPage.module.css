@@ -1,0 +1,92 @@
+.justify-container {
+  /* flex container */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px;
+  box-sizing: border-box;
+  height: calc(100% - 60px);
+}
+
+.button-container {
+  /* flex item */
+  flex-basis: calc(10% - 6px); /* height of container */
+
+  /* flex container */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* flex item */
+.button-container > button {
+  flex-basis: calc(16.666666666% - 10px);
+  background-color: steelblue;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.button-container > button:hover {
+  background-color: cadetblue;
+}
+
+.flex-container {
+  /* flex item */
+  flex-basis: calc(90% - 6px); /* height of container */
+
+  /* flex container */
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.center {
+  justify-content: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
+}
+
+.flex-item {
+  /* flex item */
+  flex-basis: calc(25% - 8px);
+  padding: 12px;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  /* flex container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-item:first-child {
+  background-color: tomato;
+}
+
+.flex-item:nth-child(2) {
+  background-color: darkslateblue;
+}
+
+.flex-item:last-child {
+  background-color: teal;
+}
