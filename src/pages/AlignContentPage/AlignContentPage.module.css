@@ -1,0 +1,53 @@
+.button-container {
+  /* flex item */
+  flex-basis: 10%;
+
+  /* flex container */
+  display: flex;
+  gap: 0 12px;
+}
+
+.button-container > button {
+  /* flex item */
+  flex-basis: 12.5%;
+}
+
+.flex-container {
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  min-height: 100px;
+}
+
+.normal {
+  align-content: normal;
+}
+
+.flex-start {
+  align-content: flex-start;
+}
+
+.flex-end {
+  align-content: flex-end;
+}
+
+.center {
+  align-content: center;
+}
+
+.space-between {
+  align-content: space-between;
+}
+
+.space-around {
+  align-content: space-around;
+}
+
+.space-evenly {
+  align-content: space-evenly;
+}
+
+.stretch {
+  align-content: stretch;
+}
