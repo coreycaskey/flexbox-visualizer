@@ -9,39 +9,39 @@ import { JustifyContent } from 'types/shared';
 import styles from './JustifyContentPage.module.css';
 
 export const JustifyContentPage = () => {
-  const [justifyContent, setJustifyContent] = useState<JustifyContent>('flex-start');
+  const [justifyContent, setJustifyContent] = useState<JustifyContent>(JustifyContent.FlexStart);
 
   const buttons: ButtonProps[] = useMemo(
     () => [
       {
         label: 'Flex Start',
         onClick: () => setJustifyContent('flex-start'),
-        isActive: justifyContent === 'flex-start',
+        isActive: justifyContent === JustifyContent.FlexStart,
       },
       {
         label: 'Flex End',
         onClick: () => setJustifyContent('flex-end'),
-        isActive: justifyContent === 'flex-end',
+        isActive: justifyContent === JustifyContent.FlexEnd,
       },
       {
         label: 'Center',
         onClick: () => setJustifyContent('center'),
-        isActive: justifyContent === 'center',
+        isActive: justifyContent === JustifyContent.Center,
       },
       {
         label: 'Space Between',
         onClick: () => setJustifyContent('space-between'),
-        isActive: justifyContent === 'space-between',
+        isActive: justifyContent === JustifyContent.SpaceBetween,
       },
       {
         label: 'Space Around',
         onClick: () => setJustifyContent('space-around'),
-        isActive: justifyContent === 'space-around',
+        isActive: justifyContent === JustifyContent.SpaceAround,
       },
       {
         label: 'Space Evenly',
         onClick: () => setJustifyContent('space-evenly'),
-        isActive: justifyContent === 'space-evenly',
+        isActive: justifyContent === JustifyContent.SpaceEvenly,
       },
     ],
     [justifyContent],

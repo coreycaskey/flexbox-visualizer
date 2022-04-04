@@ -1,0 +1,45 @@
+.button-container {
+  /* flex item */
+  flex-basis: 10%;
+
+  /* flex container */
+  display: flex;
+  gap: 0 12px;
+}
+
+.button-container > button {
+  /* flex item */
+  flex-basis: 20%;
+}
+
+.flex-start {
+  align-items: flex-start;
+}
+
+.flex-end {
+  align-items: flex-end;
+}
+
+.center {
+  align-items: center;
+}
+
+.stretch {
+  align-items: stretch;
+}
+
+.baseline {
+  align-items: baseline;
+}
+
+.baseline > .flex-item {
+  height: 100px;
+}
+
+.baseline > .flex-item:nth-child(2) {
+  align-items: flex-start;
+}
+
+.baseline > .flex-item:last-child {
+  align-items: flex-end;
+}

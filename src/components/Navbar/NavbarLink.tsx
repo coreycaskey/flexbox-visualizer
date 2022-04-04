@@ -1,15 +1,17 @@
 import { ReactNode } from 'react';
 import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 
-export interface NavigationLinkProps {
+export interface NavbarLinkProps {
   label: ReactNode;
   redirectLink: string;
+  onClick: () => void;
   className?: string;
 }
 
-export const NavigationLink: React.FC<NavigationLinkProps> = ({
+export const NavbarLink: React.FC<NavbarLinkProps> = ({
   label,
   redirectLink,
+  onClick,
   className,
 }) => {
   let resolved = useResolvedPath(redirectLink);
@@ -20,6 +22,7 @@ export const NavigationLink: React.FC<NavigationLinkProps> = ({
       className={`navbar-link ${className}`}
       to={redirectLink}
       style={{ textDecoration: match ? 'underline' : 'none' }}
+      onClick={onClick}
     >
       {label}
     </Link>

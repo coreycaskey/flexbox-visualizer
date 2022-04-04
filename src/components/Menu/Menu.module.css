@@ -1,0 +1,34 @@
+.menu-container {
+  cursor: pointer;
+}
+
+.menu-container--opened > .top > div {
+  transform: translateY(0.625rem) rotate(45deg);
+}
+
+.menu-container--opened > .middle > div {
+  transform: scale(0);
+}
+
+.menu-container--opened > .bottom > div {
+  transform: translateY(-0.625rem) rotate(-45deg);
+}
+
+.menu-container:hover > .bar > div {
+  background-color: gray;
+}
+
+.bar > div {
+  background-color: black;
+  height: 0.125rem;
+  width: 1.5rem;
+  margin: 0.5rem 0;
+  transition: background-color 0.5s, transform 0.5s;
+}
+
+/* Desktop — 1200px */
+@media screen and (min-width: 75rem) {
+  .menu-container {
+    display: none;
+  }
+}
